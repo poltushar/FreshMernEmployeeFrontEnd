@@ -23,10 +23,13 @@ function Login() {
   const getApidData = async () => {
     const { email, password } = user;
     try {
-      const res = await axios.post("http://localhost:3000/api/auth/login", {
-        email,
-        password,
-      });
+      const res = await axios.post(
+        "https://employee-back-end.vercel.app/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
 
       if (res.data.success) {
         // alert("Successfully login");

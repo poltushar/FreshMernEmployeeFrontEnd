@@ -17,7 +17,7 @@ const AddDepartment = () => {
   const addApiData = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/department/add",
+        "https://employee-back-end.vercel.app/api/department/add",
         department,
         {
           headers: {

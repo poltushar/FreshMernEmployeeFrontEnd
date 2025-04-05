@@ -16,11 +16,14 @@ const List = () => {
   const fetchEmployees = async () => {
     setEmpLoading(true);
     try {
-      const res = await axios.get("http://localhost:3000/api/employee", {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const res = await axios.get(
+        "https://employee-back-end.vercel.app/api/employee",
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
 
       if (res.data.success) {
         let sno = 1;
@@ -42,7 +45,7 @@ const List = () => {
           dob: new Date(emp.dob).toLocaleDateString(),
           profileImage: (
             <img
-              src={`http://localhost:3000/${emp.userId.profileImage}`}
+              src={`https://employee-back-end.vercel.app/${emp.userId.profileImage}`}
               width={40}
               className="rounded-full"
             ></img>

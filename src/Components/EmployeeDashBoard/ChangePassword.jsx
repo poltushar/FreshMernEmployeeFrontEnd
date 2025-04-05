@@ -32,7 +32,7 @@ const ChangePassword = () => {
     } else {
       try {
         const res = await axios.put(
-          `http://localhost:3000/api/dashboard/change-password`,
+          `https://employee-back-end.vercel.app/api/dashboard/change-password`,
           changePassword,
           {
             headers: {

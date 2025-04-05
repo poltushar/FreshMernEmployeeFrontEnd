@@ -36,12 +36,15 @@ const Edit = () => {
 
   const getEmployee = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/employee/${id}`, {
-        method: "GET",
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const res = await axios.get(
+        `https://employee-back-end.vercel.app/api/employee/${id}`,
+        {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
 
       console.log(res);
 

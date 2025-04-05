@@ -42,11 +42,14 @@ export const columns = [
 export const fetchDepartments = async () => {
   let departments;
   try {
-    const res = await axios.get("http://localhost:3000/api/department", {
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem("token")}`,
-      },
-    });
+    const res = await axios.get(
+      "https://employee-back-end.vercel.app/api/department",
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    );
 
     if (res.data.success) {
       departments = res.data.departments;
@@ -65,7 +68,7 @@ export const getEmployees = async (id) => {
   let employees;
   try {
     const res = await axios.get(
-      `http://localhost:3000/api/employee/department/${id}`,
+      `https://employee-back-end.vercel.app/api/employee/department/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

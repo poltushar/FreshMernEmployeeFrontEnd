@@ -25,7 +25,7 @@ const AddLeave = () => {
     console.log(leave);
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/leave/add",
+        "https://employee-back-end.vercel.app/api/leave/add",
         leave,
         {
           method: "POST",

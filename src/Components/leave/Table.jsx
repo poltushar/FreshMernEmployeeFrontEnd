@@ -12,11 +12,14 @@ export const Table = () => {
   console.log(columns);
   const fetchLeaves = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/leave`, {
-        headers: {
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-      });
+      const res = await axios.get(
+        `https://employee-back-end.vercel.app/api/leave`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
 
       if (res.data.success) {
         console.log(res.data.leaves);

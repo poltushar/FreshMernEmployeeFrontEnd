@@ -24,7 +24,7 @@ const LeaveList = () => {
   const fetchLeaveList = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/leave/${id}/${user.role}`,
+        `https://employee-back-end.vercel.app/api/leave/${id}/${user.role}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

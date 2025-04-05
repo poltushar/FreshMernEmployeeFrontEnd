@@ -41,7 +41,7 @@ const Add = () => {
   const POStEmployee = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/api/salary/add`,
+        `https://employee-back-end.vercel.app/api/salary/add`,
         salary,
         {
           method: "POST",
