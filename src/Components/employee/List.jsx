@@ -17,7 +17,7 @@ const List = () => {
     setEmpLoading(true);
     try {
       const res = await axios.get(
-        "https://employee-back-end.vercel.app/api/employee",
+        "https://employeebackend-1-x2mb.onrender.com/api/employee",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
