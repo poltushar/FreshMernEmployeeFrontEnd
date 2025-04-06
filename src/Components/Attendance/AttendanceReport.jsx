@@ -21,7 +21,7 @@ const AttendanceReport = () => {
       }
 
       const res = await axios.get(
-        `http://localhost:3000/api/attendance/report?${query.toString()}`,
+        `https://employeebackend-1-x2mb.onrender.com/api/attendance/report?${query.toString()}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

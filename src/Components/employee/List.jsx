@@ -45,7 +45,7 @@ const List = () => {
           dob: new Date(emp.dob).toLocaleDateString(),
           profileImage: (
             <img
-              src={`https://employee-back-end.vercel.app/${emp.userId.profileImage}`}
+              src={`${emp.userId.profileImage}`}
               width={40}
               className="rounded-full"
             ></img>

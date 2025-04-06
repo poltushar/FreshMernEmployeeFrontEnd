@@ -16,7 +16,7 @@ const View = () => {
   const fetchSalaries = async () => {
     try {
       const res = await axios.get(
-        `https://employee-back-end.vercel.app/api/salary/${id}/${user.role}`,
+        `https://employeebackend-1-x2mb.onrender.com/api/salary/${id}/${user.role}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

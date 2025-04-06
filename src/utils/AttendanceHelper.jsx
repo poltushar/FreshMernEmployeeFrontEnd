@@ -38,7 +38,7 @@ const AttendanceHelper = ({ status, employeeId, statusChange }) => {
   const markEmployee = async (status, employeeId) => {
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/attendance/update/${employeeId}`,
+        `https://employeebackend-1-x2mb.onrender.com/attendance/update/${employeeId}`,
         { status },
         {
           headers: {

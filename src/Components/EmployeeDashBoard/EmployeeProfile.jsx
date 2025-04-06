@@ -8,7 +8,7 @@ export const EmployeeProfile = () => {
   const fetchEmployee = async () => {
     try {
       const res = await axios.get(
-        `https://employee-back-end.vercel.app/api/employee/${id}`,
+        `https://employeebackend-1-x2mb.onrender.com/api/employee/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -44,7 +44,7 @@ export const EmployeeProfile = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <img
-                src={`https://employee-back-end.vercel.app/${employee.userId.profileImage}`}
+                src={`${employee.userId.profileImage}`}
                 className="rounded-full border w-72"
               ></img>
             </div>

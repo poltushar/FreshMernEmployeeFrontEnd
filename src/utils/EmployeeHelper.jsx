@@ -43,7 +43,7 @@ export const fetchDepartments = async () => {
   let departments;
   try {
     const res = await axios.get(
-      "https://employee-back-end.vercel.app/api/department",
+      "https://employeebackend-1-x2mb.onrender.com/api/department",
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -68,7 +68,7 @@ export const getEmployees = async (id) => {
   let employees;
   try {
     const res = await axios.get(
-      `https://employee-back-end.vercel.app/api/employee/department/${id}`,
+      `https://employeebackend-1-x2mb.onrender.com/api/employee/department/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

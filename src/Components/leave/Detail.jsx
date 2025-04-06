@@ -37,7 +37,7 @@ const LeaveDetail = () => {
     try {
       console.log(status);
       const res = await axios.put(
-        `https://employee-back-end.vercel.app/api/leave/${id}`,
+        `https://employeebackend-1-x2mb.onrender.com/api/leave/${id}`,
         { status },
         {
           headers: {
@@ -66,7 +66,7 @@ const LeaveDetail = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <img
-                src={`http://localhost:3000/${leave.employeeId.userId.profileImage}`}
+                src={`${leave.employeeId.userId.profileImage}`}
                 className="rounded-full border w-92 h-100"
               ></img>
             </div>

@@ -37,7 +37,7 @@ const Edit = () => {
   const getEmployee = async () => {
     try {
       const res = await axios.get(
-        `https://employee-back-end.vercel.app/api/employee/${id}`,
+        `https://employeebackend-1-x2mb.onrender.com/api/employee/${id}`,
         {
           method: "GET",
           headers: {
@@ -75,7 +75,7 @@ const Edit = () => {
 
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/employee/${id}`,
+        `https://employeebackend-1-x2mb.onrender.com/api/employee/${id}`,
         employee,
 
         {

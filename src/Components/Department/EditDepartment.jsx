@@ -22,7 +22,7 @@ const EditDepartment = () => {
     setDepLoading(true);
     try {
       const res = await axios.get(
-        `https://employee-back-end.vercel.app/api/department/${id}`,
+        `https://employeebackend-1-x2mb.onrender.com/api/department/${id}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -50,7 +50,7 @@ const EditDepartment = () => {
   const addApiData = async () => {
     try {
       const res = await axios.put(
-        `https://employee-back-end.vercel.app/api/department/${id}`,
+        `https://employeebackend-1-x2mb.onrender.com/api/department/${id}`,
         department,
         {
           headers: {

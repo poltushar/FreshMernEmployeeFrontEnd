@@ -24,7 +24,7 @@ function Login() {
     const { email, password } = user;
     try {
       const res = await axios.post(
-        "https://employee-back-end.vercel.app/api/auth/login",
+        "https://employeebackend-1-x2mb.onrender.com/api/auth/login",
         {
           email,
           password,
